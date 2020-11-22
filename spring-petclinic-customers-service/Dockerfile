@@ -6,4 +6,5 @@ ADD https://github.com/jwilder/dockerize/releases/download/${DOCKERIZE_VERSION}/
 RUN tar xzf dockerize.tar.gz && chmod +x dockerize
 ADD ./target/*.jar /app.jar
 EXPOSE ${EXPOSE_PORT}
+ENTRYPOINT [ "java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar" ]
 
