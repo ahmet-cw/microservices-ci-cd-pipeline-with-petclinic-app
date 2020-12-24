@@ -11,6 +11,10 @@ metadata:
     io.kompose.service: api-gateway
   name: api-gateway
 spec:
+  tls:
+    - hosts:
+      - petclinic003.ahmet.link
+      secretName: petclinic-tls
   rules:
     - host: petclinic003.ahmet.link
       http:
