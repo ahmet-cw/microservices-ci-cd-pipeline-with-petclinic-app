@@ -4,7 +4,7 @@ metadata:
   annotations:
     kompose.cmd: kompose convert -f k8s/docker-compose.yml -o k8s/base
     kompose.image-pull-secret: regcred
-    kompose.service.expose: petclinicstaging03.ahmet.link
+    kompose.service.expose: petclinic003.ahmet.link
     kompose.version: 1.22.0 (955b78124)
   creationTimestamp: null
   labels:
@@ -12,7 +12,7 @@ metadata:
   name: api-gateway
 spec:
   rules:
-    - host: petclinicstaging03.ahmet.link
+    - host: petclinic003.ahmet.link
       http:
         paths:
           - backend:
